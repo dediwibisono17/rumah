@@ -1,0 +1,286 @@
+$yellow: yellow;
+$new-yellow: #FFAE00;
+main {
+    font-family: 'Poppins' !important;
+    .top {
+        display: block;
+        position: relative;
+        height: 100vh;
+        background: $yellow;
+        z-index: 1;
+        &__button {
+            position: absolute;
+            left: 80px;
+            top: 260px;
+            z-index: 3;
+            @media screen and (max-width: 766px) {
+                top: 330px
+            }
+        }
+        &__left {
+            // background: red;
+            position: absolute;
+            left: 80px;
+            color: white;
+            font-family: 'Poppins';
+            top: 100px;
+            padding: 0 16px;
+            border-left: 3px solid $yellow;
+            z-index: 3;
+            h1 {
+                font-weight: bold;
+            }
+        }
+        &__bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 3;
+            background: rgba(0, 0, 0, .4);
+        }
+        &__right {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 2;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.mid {
+    // padding: 32px 0;
+    max-height: 800px;
+    position: relative;
+    @media screen and(max-width: 766px) {
+        max-height: initial;
+    }
+    &-content {
+        @media screen and (max-width: 766px) {
+            margin-top: 16px;
+        }
+    }
+    .help-white {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 2;
+        background: white;
+        opacity: .8;
+        @media screen and (max-width: 766px) {
+            opacity: .2;
+        }
+    }
+    &-content {
+        padding: 32px 0;
+        position: relative;
+        z-index: 6;
+    }
+    .parallax {
+        /* The image used */
+        background-image: url("../img/bg1.png");
+        /* Set a specific height */
+        min-height: 500px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+section {
+    overflow-x: hidden;
+    .image {
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.highlights {
+    background: #222838;
+    &-content {
+        padding: 32px;
+        color: white;
+    }
+    .wrap_ {
+        @media screen and (max-width: 766px) {
+            padding: 0 16px;
+        }
+    }
+}
+
+.payment {
+    // background: #ececec;
+    position: relative;
+    .bg-abs {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .bg-white {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 4;
+        background: white;
+        opacity: .8;
+    }
+    .card {
+        background: white;
+        box-shadow: 0 3px 6px #bbb;
+        margin: 16px;
+        border-radius: 25px;
+        padding: 16px;
+    }
+    h2,
+    .line_btm {
+        position: relative;
+        z-index: 5;
+    }
+    .system {
+        position: relative;
+        z-index: 5;
+        .priority {
+            background: radial-gradient(circle, #fff59d, #ffee58);
+        }
+        ul {
+            margin-top: 16px;
+            list-style: none;
+            padding: 0 16px;
+        }
+        li {
+            padding-left: 1.3em;
+            color: black;
+        }
+        li:before {
+            content: "\f00c";
+            /* FontAwesome Unicode */
+            font-family: FontAwesome;
+            display: inline-block;
+            margin-left: -1.3em;
+            /* same as padding-left set on li */
+            width: 1.3em;
+            /* same as padding-left set on li */
+        }
+    }
+}
+
+.pricing {
+    &-detail {
+        padding: 16px;
+        color: #666;
+    }
+    .price {
+        font-size: 28px;
+        color: black;
+    }
+    .card {
+        border-radius: 25px;
+        // border: 1px solid yellow;
+        box-shadow: 0 3px 6px #bbb;
+        margin-bottom: 16px;
+    }
+    &-img {
+        height: 240px !important;
+        img {
+            border-radius: 25px 25px 0 0;
+            object-fit: cover !important;
+        }
+    }
+}
+
+.line_btm {
+    height: 2px;
+    width: 90px;
+    margin: 4px 0 16px;
+    background: $yellow;
+}
+
+.color {
+    &-yellow {
+        color: $yellow;
+    }
+    &-grey {
+        color: gray;
+    }
+    &-new-yellow {
+        color: $new-yellow;
+    }
+    &-silver {
+        color: #9b9b9b;
+    }
+}
+
+.font {
+    &-bold {
+        font-weight: bold;
+    }
+}
+
+.btn {
+    &-primary {
+        color: black !important;
+        outline: 0;
+        box-shadow: none;
+        border-color: transparent !important;
+        font-weight: bold !important;
+        border-radius: 25px !important;
+        padding: 8px 24px !important;
+        background: rgba(yellow, .8) !important;
+        transition: .3s;
+        &:hover {
+            background-color: yellow !important;
+        }
+    }
+}
+
+.fa-big {
+    font-size: 52px !important;
+}
+
+.floating-button {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #075E54;
+    z-index: 999;
+    text-align: center;
+    box-shadow: 0px 1px 4px #bbb;
+    a {
+        i {
+            color: white;
+            padding: 8px 0;
+            font-size: 32px;
+            text-align: center;
+        }
+    }
+}
